@@ -16,3 +16,23 @@ function search(event) {
 let form = document.querySelector("#searchTab");
 
 form.addEventListener("submit", search);
+
+let currentDate = document.querySelector("#current-date");
+let currentTime = new Date();
+let minutes = currentTime.getMinutes();
+let hours = currentTime.getHours();
+let day = currentTime.getDay();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let resetDay = days[day];
+
+currentDate.innerHTML = `${resetDay}  ${hours}:  ${minutes} `;
