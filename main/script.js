@@ -17,6 +17,7 @@ let form = document.querySelector("#searchTab");
 
 form.addEventListener("submit", search);
 
+// formula to get Date from html
 let currentDate = document.querySelector("#current-date");
 let currentTime = new Date();
 let minutes = currentTime.getMinutes();
